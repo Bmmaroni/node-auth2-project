@@ -29,7 +29,7 @@ const restricted = (req, res, next) => {
 				})
 			}
 
-			jwt.verify(token, "keep it secret keep it safe", (err, decoded) => {
+			jwt.verify(token, "keep it secret keep it safe", (err, decoded) => { // replace with secret variable
 				if (err) {
 					json.status(401).json({
 						message: "Token invalid"
